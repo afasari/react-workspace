@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router";
 import { useState, useEffect, useRef } from "react";
 import { PokemonCard } from "../../components/pokemon/PokemonCard";
 import type { Pokemon } from "../../types/pokemon";
@@ -16,12 +16,24 @@ async function fetchWithRetry(url: string, retries = 3) {
   }
 }
 
+interface PokemonResult {
+  url: string;
+  name: string;
+}
+
+interface PokemonListResponse {
+  results: PokemonResult[];
+  count: number;
+  next: string | null;
+  previous: string | null;
+}
+
 export async function loader() {
   try {
-    const data = await fetchWithRetry('https://pokeapi.co/api/v2/pokemon?limit=20');
-    const pokemonUrls = data.results.map((pokemon: { url: string }) => pokemon.url);
+    const data = await fetchWithRetry('https://pokeapi.co/api/v2/pokemon?limit=20') as PokemonListResponse;
+    const pokemonUrls = data.results.map((pokemon: PokemonResult) => pokemon.url);
     const pokemonDetails = await Promise.all(
-      pokemonUrls.map(url => fetchWithRetry(url).catch(() => null))
+      pokemonUrls.map((url: string) => fetchWithRetry(url).catch(() => null))
     );
     const validPokemon = pokemonDetails.filter((pokemon): pokemon is Pokemon => pokemon !== null);
     

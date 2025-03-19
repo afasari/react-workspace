@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Workspace - Project Showcase</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white">
+    <div class="min-h-screen">
+        <header class="bg-blue-600 text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="flex items-center justify-center mb-6">
+                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" 
+                         alt="React Logo" 
+                         class="w-24 h-24 animate-spin-slow">
+                </div>
+                <h1 class="text-4xl font-bold text-center">React Workspace</h1>
+                <p class="text-xl text-center mt-4">A collection of React projects showcasing various implementations and features</p>
+            </div>
+        </header>
+
+        <main class="container mx-auto px-4 py-12">
+            <section class="mb-12">
+                <h2 class="text-3xl font-bold mb-6">Featured Projects</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="./pokedex" 
+                       class="block bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold">Pokédex</h3>
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png" 
+                                 alt="Pokeball" 
+                                 class="w-8 h-8">
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            A beautiful, modern Pokédex application featuring all Generation I Pokémon with type-based themed cards,
+                            detailed statistics, and a responsive design.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm">TypeScript</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm">TailwindCSS</span>
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 rounded-full text-sm">PokeAPI</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-gray-200 dark:bg-gray-800 py-6">
+            <div class="container mx-auto px-4 text-center">
+                <p>Made with ❤️ by <a href="https://github.com/afasari" class="text-blue-600 dark:text-blue-400 hover:underline">afasari</a></p>
+            </div>
+        </footer>
+    </div>
+
+    <style>
+        .animate-spin-slow {
+            animation: spin 20s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</body>
+</html>

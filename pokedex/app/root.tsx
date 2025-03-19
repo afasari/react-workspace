@@ -73,3 +73,17 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
     </main>
   );
 }
+
+export function Head() {
+  return (
+    <>
+      <Links />
+      <link 
+        rel="icon" 
+        type="image/png" 
+        href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+      />
+      <title>Pokédex</title>
+    </>
+  );
+}

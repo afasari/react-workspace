@@ -1,5 +1,5 @@
-import { useLoaderData, Link } from "react-router-dom";
-import type { LoaderFunctionArgs } from "react-router-dom";
+import { useLoaderData, Link } from "react-router";
+import type { LoaderFunctionArgs } from "react-router";
 import { PokemonDetail } from "../../components/pokemon/PokemonDetail";
 import type { PokemonDetailed } from "../../types/pokemon";
 
