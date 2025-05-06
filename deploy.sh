@@ -2,16 +2,23 @@
 
 # Build the project
 echo "Building projects..."
-cd pokedex
+# cd pokedex
+# npm run build
+# cd ..
+
+cd calculator
 npm run build
 cd ..
 
-# Create public directory for deployment
+# Create public directory and subdirectories for deployment
 echo "Preparing files for deployment..."
 rm -rf public
 mkdir public
+mkdir -p public/pokedex
+mkdir -p public/calculator
 cp index.html ./public/
-cp -r pokedex/build/* ./public/pokedex/
+cp -r ./pokedex/build/* ./public/pokedex/
+cp -r ./calculator/dist/* ./public/calculator/
 
 # Deploy to GitHub Pages
 echo "Deploying to GitHub Pages..."

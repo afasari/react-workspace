@@ -25,6 +25,20 @@ A beautiful, modern Pokédex application featuring:
 
 [View Project →](./pokedex)
 
+### Calculator Collection
+
+A collection of useful calculators including:
+
+- RBB BUMN 2025 Calculator
+  - Multi-stage assessment scoring
+  - Education level-based calculations
+  - Real-time pass/fail status
+- More calculators coming soon!
+
+**Tech Stack**: React, Vite, JavaScript, CSS
+
+[View Project →](./calculator)
+
 ## 🛠️ Getting Started
 
 Each project has its own README with specific setup instructions. Generally, you can:
