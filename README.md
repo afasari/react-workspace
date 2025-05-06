@@ -1,10 +1,8 @@
 # React Workspace
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" width="150" height="150"/>
-  
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-</div>
+![React Logo](https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A collection of React projects showcasing various implementations and features.
 
